@@ -21,6 +21,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Validate app JavaScript and manifest
+        run: |
+          python3 - <<'PY'
+          import re, json
+          html = open("index.html", encoding="utf-8").read()
+          scripts = re.findall(r"<script>(.*?)</script>", html, re.S)
+          assert scripts, "No app script found"
+          open("/tmp/playfinder.js", "w", encoding="utf-8").write("\n".join(scripts))
+          json.load(open("manifest.webmanifest", encoding="utf-8"))
+          PY
+          node --check /tmp/playfinder.js
       - name: Build downloadable source ZIP
         run: |
           zip -q PLAYFINDER-app.zip index.html manifest.webmanifest sw.js icon.svg README.md
