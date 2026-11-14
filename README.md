@@ -14,9 +14,9 @@ The catalogue has 70 selected games across horror, RPG, action, roleplay, strate
 - Save favourites in this browser
 - Compare up to three games
 - Quick game details and direct Roblox links
-- Official Roblox game icons on game cards, with fallback covers if an image is unavailable
+- Roblox game artwork on cards, with fallback covers if an image is unavailable
 
 ## Scores and artwork
-Scores are Playfinder's editorial opinions, not official Roblox ratings. Game icons are looked up from Roblox's public place-game-icon endpoint during deployment, then served from this website to avoid browser cross-origin restrictions. If Roblox has no icon for a place, the card keeps its gradient and emoji fallback.
+Scores are Playfinder's editorial opinions, not official Roblox ratings. The site asks Roblox's public place-game-icon endpoint for image URLs through a public GET proxy, then loads the actual artwork from Roblox's image CDN. If a thumbnail service or a game's icon is unavailable, the card keeps its gradient and emoji fallback.
 
 PLAYFINDER is an independent fan project and is not affiliated with Roblox Corporation.
