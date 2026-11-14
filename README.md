@@ -1,35 +1,22 @@
 # PLAYFINDER 🎮
 
-A no-account Roblox game finder with a growing hand-picked catalogue, useful filters, favourites, game comparisons and Roblox game artwork.
+PLAYFINDER is a Roblox game discovery website. Open it in your browser and use it there — no installer, app download, account, or sign-up.
 
-**Live app:** https://tthallow.github.io/PLAYFINDER/
+**Website:** https://tthallow.github.io/PLAYFINDER/
 
-## The list
-The current catalogue has 70 selected games across horror, RPG, action, roleplay, strategy, shooters, survival, obbies, simulators, tycoons and social games. Picks focus on gameplay variety, replay value, originality and whether a game is worth recommending — not just how many people are online.
-
-This is a growing shortlist, not a claim that hundreds of unreviewed games are all great. New picks should be added after checking the actual experience and its Roblox place ID.
+## What's on the list?
+The catalogue has 70 selected games across horror, RPG, action, roleplay, strategy, shooters, survival, obbies, simulators, tycoons and social games. Picks focus on gameplay variety, replay value, originality and whether a game is worth recommending — not just how many people are online.
 
 ## Features
 - Search by game name, genre or keywords
 - Filter by genre, play style and difficulty
 - Sort by Playfinder's editorial score
-- Save favourites locally; no account required
+- Save favourites in this browser
 - Compare up to three games
 - Quick game details and direct Roblox links
-- Roblox game thumbnails loaded directly from each game's Place ID, with built-in fallback artwork
-- Installable PWA with offline app-shell caching
+- Official Roblox game icons on game cards, with fallback covers if an image is unavailable
 
-## Install
-- **Windows / macOS:** Open the live app in Chrome or Edge and use the install icon in the address bar or the Install app button.
-- **Android:** Open in Chrome → menu → Install app / Add to Home screen.
-- **iPhone / iPad:** Open in Safari → Share → Add to Home Screen.
-
-This is a Progressive Web App, not a native Windows .exe or Android .apk.
-
-## Run locally
-Serve this folder from localhost (for example, `python -m http.server 8000`) and open `http://localhost:8000`. Opening `index.html` as a file will not enable service workers.
-
-## Scores and data
-Scores are Playfinder's editorial picks, not official Roblox ratings. Each cover uses Roblox's public place-thumbnail URL. If a game thumbnail is unavailable, the card falls back to its gradient and emoji. Some Roblox public endpoints are not documented as stable and may change.
+## Scores and artwork
+Scores are Playfinder's editorial opinions, not official Roblox ratings. Game icons are looked up from Roblox's public place-game-icon endpoint during deployment, then served from this website to avoid browser cross-origin restrictions. If Roblox has no icon for a place, the card keeps its gradient and emoji fallback.
 
 PLAYFINDER is an independent fan project and is not affiliated with Roblox Corporation.
