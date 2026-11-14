@@ -74,7 +74,8 @@ async function loadExtraCatalog(){
     loadRobloxGameImages();
   }catch(error){console.warn("PLAYFINDER could not load the extra game list.",error)}
 }
-\nasync function loadRobloxGameImages(){
+
+async function loadRobloxGameImages(){
   const placeIds=games.map(g=>g.placeId).filter(Boolean);
   if(!placeIds.length)return;
   const endpoint=new URL("https://thumbnails.roblox.com/v1/places/gameicons");
@@ -113,4 +114,5 @@ document.addEventListener("error",event=>{
 
 render();
 loadRobloxGameImages();
+loadExtraCatalog();
 </script></body></html>

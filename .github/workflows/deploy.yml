@@ -34,11 +34,11 @@ jobs:
           node --check /tmp/playfinder.js
       - name: Build downloadable source ZIP
         run: |
-          zip -q PLAYFINDER-app.zip index.html manifest.webmanifest sw.js icon.svg icon-192.png icon-512.png README.md
+          zip -q PLAYFINDER-app.zip index.html games-extra.json manifest.webmanifest sw.js icon.svg icon-192.png icon-512.png README.md
       - name: Prepare app site
         run: |
           mkdir -p site
-          cp index.html manifest.webmanifest sw.js icon.svg icon-192.png icon-512.png README.md PLAYFINDER-app.zip site/
+          cp index.html games-extra.json manifest.webmanifest sw.js icon.svg icon-192.png icon-512.png README.md PLAYFINDER-app.zip site/
           test -s site/index.html
           unzip -tq site/PLAYFINDER-app.zip
       - name: Upload Pages artifact
