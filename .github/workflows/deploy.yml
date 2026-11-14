@@ -32,7 +32,7 @@ jobs:
           catalog = json.load(open("games-extra.json", encoding="utf-8"))
           assert len(catalog) == 58, f"Expected 58 extra games, got {len(catalog)}"
           assert "asset-thumbnail/image?assetId=" in html, "Cards do not use direct Roblox image URLs"
-  assert "proxy.cors.dev/" not in html, "Unreliable thumbnail proxy remains"
+          assert "proxy.cors.dev/" not in html, "Unreliable thumbnail proxy remains"
           assert 'id="zip"' not in html and 'id="install"' not in html, "Download/install controls remain"
           PY
           node --check /tmp/playfinder.js
