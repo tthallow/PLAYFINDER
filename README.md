@@ -16,7 +16,7 @@ This is a growing shortlist, not a claim that hundreds of unreviewed games are a
 - Save favourites locally; no account required
 - Compare up to three games
 - Quick game details and direct Roblox links
-- Roblox game-icon thumbnails with built-in fallback artwork
+- Roblox game thumbnails loaded directly from each game's Place ID, with built-in fallback artwork
 - Installable PWA with offline app-shell caching
 
 ## Install
@@ -30,6 +30,6 @@ This is a Progressive Web App, not a native Windows .exe or Android .apk.
 Serve this folder from localhost (for example, `python -m http.server 8000`) and open `http://localhost:8000`. Opening `index.html` as a file will not enable service workers.
 
 ## Scores and data
-Scores are Playfinder's editorial picks, not official Roblox ratings. Thumbnails are requested from Roblox's public thumbnail service and may be unavailable for a game; the card falls back to its gradient and emoji. Some Roblox public endpoints are not documented as stable and may change.
+Scores are Playfinder's editorial picks, not official Roblox ratings. Each cover uses Roblox's public place-thumbnail URL. If a game thumbnail is unavailable, the card falls back to its gradient and emoji. Some Roblox public endpoints are not documented as stable and may change.
 
 PLAYFINDER is an independent fan project and is not affiliated with Roblox Corporation.
